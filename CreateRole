@@ -1,0 +1,15 @@
+1. Create the role from the console on the account you wish to list resouces from AWS CLI.
+2. choose for example an existing AWS permission, example: ViewOnlyAccess.
+3. Go ahead and edit the Trusted entities as shown in trsuted_entities file.
+4. Give a name to your role and click next and create.
+5. Check your role from role in the account console.
+6. go to your terminal (home laptop) and edit  ~/.aws/credentials.
+put for example:
+vim ~/.aws/credentials
+[default]
+aws_access_key_id = Key
+aws_secret_access_key = secret_key
+
+[Project_Account]
+role_arn = arn
+source_profile = default
